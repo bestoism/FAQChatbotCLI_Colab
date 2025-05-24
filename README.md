@@ -1,27 +1,46 @@
-# FAQChatbotCLI
+# FAQ Chatbot CLI
 
-A simple CLI-based FAQ Chatbot built in Python. This chatbot can answer frequently asked questions based on a text file (`faq.txt`) and responds directly via the terminal. If a question isn't recognized, it will politely decline to answer.
-
----
+This project is a simple command-line chatbot that answers frequently asked questions (FAQ) using semantic similarity with Sentence Transformers.
 
 ## Features
 
-* **Loads Predefined FAQ:** Easily loads questions and answers from a plain text file (`faq.txt`).
-* **Command Line Interface (CLI):** Seamless interaction with users directly via the terminal.
-* **Exact Question Matching:** Matches user questions to stored answers precisely, ignoring case and leading/trailing whitespace for flexibility.
-* **Graceful Unknown Question Handling:** Politely declines to answer questions that are not recognized in its knowledge base.
-
----
+- Loads FAQ data from a text file
+- Uses sentence embeddings to match user questions with FAQ
+- Provides answers or a fallback message if no match is found
 
 ## Requirements
 
-* **Python 3.x:** Ensure you have Python version 3 or higher installed.
-* **No External Libraries:** Built purely with standard Python libraries, so no additional installations are needed.
+- Python 3.x
+- [sentence-transformers](https://www.sbert.net/)
+- torch
 
----
+## How to Run
 
-## 🚀 How to Use
+1. Install the required packages:
+   ```
+   pip install sentence-transformers torch
+   ```
 
-### 1. Prepare Your FAQ Data
+2. Run the notebook or script:
+   - If using Jupyter Notebook, run all cells in `FAQChatbotCLI.ipynb`.
+   - If using as a script, ensure `faq.txt` is present and run the Python code.
 
-Create or edit the `faq.txt` file in the project directory. Add your questions and answers using the following format:
+3. Interact with the chatbot in the terminal. Type your question or `exit` to quit.
+
+## FAQ Data
+
+The FAQ data is stored in `faq.txt` with the following format:
+```
+Q: Your question?
+A: The answer.
+
+Q: Another question?
+A: Another answer.
+```
+
+## Example
+
+```
+You: What is AI?
+Chatbot: AI stands for Artificial Intelligence.
+```
