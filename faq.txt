@@ -1,0 +1,8 @@
+Q: Apa itu AI?
+A: AI adalah singkatan dari Artificial Intelligence, yaitu kecerdasan buatan.
+
+Q: Apa itu machine learning?
+A: Machine learning adalah cabang AI yang membuat mesin belajar dari data.
+
+Q: Apa perbedaan supervised dan unsupervised learning?
+A: Supervised learning menggunakan data berlabel, sedangkan unsupervised tidak.
